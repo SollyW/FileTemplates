@@ -2,7 +2,7 @@
 Allows uploaded files to be inlined into MediaWiki pages
 
 ## Installation
-- Place FileTemplates into your MediaWiki extensions directory
+- Extract and place FileTemplates into your MediaWiki extensions directory
 - Add `wfLoadExtension( 'FileTemplates' );` to LocalSettings.php
 
 ## Configuration
