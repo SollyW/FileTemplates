@@ -1,0 +1,46 @@
+{
+    "author": "Solly Watkins",
+    "descriptionmsg": "filetemplates-description",
+    "license-name": "CC0",
+    "name": "FileTemplates",
+    "manifest_version": 2,
+    "type": "parserhook",
+    "version": "1.0.0",
+
+    "config": {
+        "FileTemplatesAllowedMimeTypes": {
+            "value": [],
+            "descriptionmsg": "filetemplates-config-allowed-mime-types-description",
+            "public": true
+        }
+    },
+
+    "AutoloadClasses": {
+        "FileTemplates\\Hooks": "src/Hooks.php"
+    },
+
+    "ConfigRegistry": {
+        "filetemplates": "GlobalVarConfig::newInstance"
+    },
+
+    "ExtensionMessagesFiles": {
+        "FileTemplates\\Magic": "Magic.i18n.php"
+    },
+
+    "HookHandlers": {
+        "main": {
+            "class": "FileTemplates\\Hooks",
+            "services": [ "ConfigFactory" ]
+        }
+    },
+
+    "Hooks": {
+        "ParserFirstCallInit": "main"
+    },
+
+    "MessagesDirs": {
+        "FileTemplates": [
+            "i18n"
+        ]
+    }
+}

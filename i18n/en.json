@@ -1,0 +1,11 @@
+{
+    "filetemplates-config-allowed-mime-types-description": "Allowed MIME types for files inlined into pages",
+    "filetemplates-description": "Allows uploaded files to be inlined into pages",
+    "filetemplates-disallowed-mime-type-error": "MIME type $1 is disallowed. Must be one of the following: $2",
+    "filetemplates-fetch-file-failed-error": "Failed to fetch file",
+    "filetemplates-file-not-found-error": "[[$1]] does not exist",
+    "filetemplates-function-error": "Error loading $1: $2",
+    "filetemplates-get-contents-failed-error": "Failed to get contents of file",
+    "filetemplates-invalid-file-name-error": "Invalid file name",
+    "filetemplates-no-mime-types-error": "No allowed MIME types have been configured; file templates cannot be used"
+}
