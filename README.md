@@ -7,6 +7,7 @@ Allows uploaded files to be inlined into MediaWiki pages
 
 ## Configuration
 Configure allowed MIME types:
+
 `LocalSettings.php`
 ```php
 $wgFileTemplatesAllowedMimeTypes = [
