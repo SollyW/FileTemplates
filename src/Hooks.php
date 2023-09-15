@@ -16,7 +16,7 @@ class Hooks implements ParserFirstCallInitHook {
     }
 
     public function onParserFirstCallInit( $parser ) {
-        $parser->setFunctionHook( 'filetemplate', function ( $parser, $name = '' ) {
+        $parser->setFunctionHook( 'filetemplate', function ( $parser, $name = '', $trim = 'true' ) {
             $getErrorMessage = function ( $message ) use ( $name ) {
                 return Html::element( 'div',
                                       [ 'class' => 'error' ],
@@ -52,6 +52,10 @@ class Hooks implements ParserFirstCallInitHook {
             $output = $file ? file_get_contents( $file->getLocalRefPath() ) : false;
             if ( !$output ) {
                 return $getErrorMessage( wfMessage( 'filetemplates-get-contents-failed-error' ) );
+            }
+
+            if ( filter_var( $trim, FILTER_VALIDATE_BOOLEAN ) ) {
+                $output = trim( $output );
             }
 
             return $parser->insertStripItem( str_replace( "\n", ' ', $output ) );

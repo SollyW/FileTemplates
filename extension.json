@@ -1,11 +1,12 @@
 {
     "author": "Solly Watkins",
     "descriptionmsg": "filetemplates-description",
-    "license-name": "CC0",
-    "name": "FileTemplates",
+    "license-name": "CC0-1.0",
     "manifest_version": 2,
+    "name": "FileTemplates",
     "type": "parserhook",
-    "version": "1.0.0",
+    "url": "https://github.com/SollyW/FileTemplates",
+    "version": "1.1.0",
 
     "config": {
         "FileTemplatesAllowedMimeTypes": {
